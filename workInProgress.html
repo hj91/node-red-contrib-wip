@@ -1,0 +1,39 @@
+<script type="text/x-red" data-template-name="workInProgress">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-topic"><i class="fa fa-tasks"></i> Topic</label>
+        <input type="text" id="node-input-topic" placeholder="Topic">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="workInProgress">
+    <p>This node calculates the work in progress duration based on incoming <code>msg.payload</code> values and <code>msg.topic</code> values.</p>
+    <p>When the input message has the topic "start_time" and a payload of <code>true</code>, the node starts the timer. When the input message has the topic "stop_time" and a payload of <code>true</code>, the node stops the timer.</p>
+    <p>When the input message has the topic "set" and a payload of <code>true</code>, the node will output the start time, stop time, and duration in seconds.</p>
+    <p>If the input message contains <code>msg.payload.reset</code> set to <code>true</code>, the node will reset all stored data and the timer will be reset.</p>
+    <p>Invalid input sequences, such as receiving a "stop_time" before a "start_time", will result in an error message.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType("workInProgress", {
+        category: "WIP by Bufferstack.IO",
+        defaults: {
+            name: {value: ""},
+            topic: {value: ""}
+        },
+        color: "#a6bbcf",
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-hourglass",
+        label: function() {
+            return this.name || "workInProgress";
+        },
+        labelStyle: function() {
+            return this.name ? "node_label_italic" : "";
+        }
+    });
+</script>
+
