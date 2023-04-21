@@ -1,0 +1,30 @@
+{
+  "name": "node-red-contrib-wip",
+  "version": "0.0.1",
+  "description": "A Node-RED module to track and manage work in progress by monitoring the duration of a process through start and stop times.",
+  "homepage": "https://github.com/hj91/node-red-contrib-wip",
+  "bugs": "https://github.com/hj91/node-red-contrib-wip/issues",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Harshad Joshi",
+    "email": "harshad@bufferstack.io",
+    "url": "https://bufferstack.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hj91/node-red-contrib-wip"
+  },
+  "keywords": [
+    "node-red",
+    "work-in-progress",
+    "wip",
+    "time tracking",
+    "process duration"
+  ],
+  "node-red": {
+    "nodes": {
+      "workInProgress": "workInProgress.js",
+      "workInProgressDisplay": "workInProgressDisplay.js"
+    }
+  }
+}
