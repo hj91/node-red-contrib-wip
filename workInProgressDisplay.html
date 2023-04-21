@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    RED.nodes.registerType("workInProgressDisplay", {
+        category: "WIP by Bufferstack.IO",
+        color: "#A6BBCF",
+        defaults: {
+            name: { value: "" },
+            topic: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "work in progress display";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="workInProgressDisplay">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-topic"><i class="icon-tag"></i> Topic</label>
+        <input type="text" id="node-input-topic" placeholder="Topic">
+    </div>
+</script>
+
