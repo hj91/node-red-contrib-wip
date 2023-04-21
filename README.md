@@ -16,7 +16,7 @@ A Node-RED module designed to track and manage work in progress by monitoring th
 Use the following command to install the module:
 
 ```
-npm install node-red-contrib-work-in-progress
+npm install node-red-contrib-wip
 ```
 
 ## Usage
