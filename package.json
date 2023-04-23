@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-wip",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Node-RED module to track and manage work in progress by monitoring the duration of a process through start and stop times.",
   "homepage": "https://github.com/hj91/node-red-contrib-wip",
   "bugs": "https://github.com/hj91/node-red-contrib-wip/issues",
